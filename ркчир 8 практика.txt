@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<header class="header">
+    <div class="burger-menu">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-btn" for="menu-toggle">
+          <span></span>
+        </label>
+        <div class="menubox">
+            <p><b>Skin</b></p>
+            <a class="menu-item" href="#">О сайте</a>
+            <a class="menu-item" href="#">Тест</a>
+            <a class="menu-item" href="#">Рекомендации</a>
+            <a class="menu-item" href="#">Статьи</a>
+            <a class="menu-item" href="#">Контакты</a>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__nadtitle">Skin Care</h2>
+            <h1 class="intro__title">Подберите экспертный уход для своей кожи</h1>
+        </div>
+    </div>
+</div>
+<section class="setka">
+    <div class="first">
+        <img class="pc1" src="https://avatars.mds.yandex.net/i?id=2ead889162394d4687603140b027073d0b668e6c-4748118-images-thumbs&n=13">
+    </div>
+    <div class="second">
+        <img class="pc2" src="https://fanibani.ru/wp-content/uploads/2021/07/milie009.jpg">
+    </div>
+    <div class="third">
+        <img class="pc3" src="https://wallbox.ru/wallpapers/main/201547/9dbdf1269bf5a53.jpg">
+    </div>
+    <div class="fourth">
+        <img class="pc4" src="https://proprikol.ru/wp-content/uploads/2020/08/krasivye-kartinki-kotikov-17.jpg">
+    </div>
+    <div class="fifth">
+        <img class="pc5" src="https://bugaga.ru/uploads/posts/2017-03/1489052066_kotik-hosiko-11.jpg">
+    </div>
+    <div class="sixth">
+        <img class="pc6" src="https://i05.fotocdn.net/s127/9e8da440d3c44bbf/public_pin_l/2875690942.jpg">
+    </div>
+    <div class="seventh">
+        <img class="pc7" src="https://mobimg.b-cdn.net/v3/fetch/48/48de12c89e3634e7298cb106fabcd10b.jpeg">
+    </div>
+</section>
+<form class="form" action="">
+    <label for="firstName" class="first-name">Имя</label>
+    <input id="firstName" type="text">
+
+    <label for="lastName" class="last-name">Фамилия</label>
+    <input id="lastName" type="text">
+
+    <label for="age">Возраст</label>
+    <input id="age" type="text">
+
+    <label for="email">Email</label>
+    <input id="email" type="email">
+
+    <button>Отправить</button>
+</form>
+<footer>
+   
+    <span class="footer-header">О нас</span>
+
+    <span class="footer-header">Меню</span>
+  
+    <span class="footer-header">Контакты</span>
+
+    <span class="footer-header">Наш офис</span>
+
+</footer>
+
+</body>
+
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("C:/Users/asus/.vscode/kurs/html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 8px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+  .menu-item {
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu-item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu-toggle{
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+  }
+
+@media only screen and (max-width: 480px) {
+    .dws-wrapper {
+     margin-top: 20px;
+    }
+    .imageBox {
+     height: 370px;
+    }
+    .imageBox h3 {
+     font-size: 1.4rem;
+     top: 47%;
+    }
+}
+   
+@media only screen and (max-width: 320px) {
+    .imageBox {
+     height: 270px;
+    }
+    .imageBox h3 {
+     font-size: 1.1rem;
+     top: 45%;
+    }
+}
+
+
+.setka
+{
+    display: grid;
+    grid-template-columns: 300px 300px 200px;
+    grid-template-rows: minmax(100px,200px), 200px, minmax(100px,160px);
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: bisque;
+}
+.first
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+    transition: 0.5s;
+}
+.second
+{
+    grid-column-start: 3;
+    grid-column-end: end;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: mediumaquamarine;
+    transition: 0.5s;
+}
+.third
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: beige;
+    transition: 0.5s;
+}
+.fourth
+{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: yellowgreen;
+    transition: 0.5s;
+}
+.fifth
+{
+    grid-column-start: 3;
+    grid-column-end: end;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: pink;
+    transition: 0.5s;
+}
+.sixth
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: green;
+    transition: 0.5s;
+}
+.seventh
+{
+    grid-column-start: 2;
+    grid-column-end: end;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: peru;
+    transition: 0.5s;
+}
+
+.pc1
+{
+    max-width: 100%;
+    margin-left: 220px;
+    width: 200px;
+    height: 200px;
+    transition: .5s;
+}
+.pc2
+{
+    max-width: 100%;
+    width: auto;
+    height: 200px;
+    margin-left: 180px;
+    transition: .5s;
+}
+.pc3
+{
+    max-width: 100%;
+    margin-left: 45px;
+    width: 200px;
+    height: 200px;
+    transition: .5s;
+}
+.pc4
+{
+    
+    max-width: 100%;
+    margin-left: 30px;
+    width: 250px;
+    height: 200px;
+    transition: .5s;
+}
+.pc5
+{
+    max-width: 100%;
+    margin-left: 210px;
+    width: 200px;
+    height: 200px;
+    transition: .5s;
+}
+.pc6
+{
+    max-width: 100%;
+    margin-left: 45px;
+    width: 200px;
+    height: 160px;
+    transition: .5s;
+}
+.pc7
+{
+    max-width: 100%;
+    margin-left: 320px;
+    width: 250px;
+    height: 160px;
+    transition: .5s;
+}
+
+
+.pc1:hover
+{
+    transform:rotate(360deg);
+}
+.pc2:hover
+{
+    transform:scale(1.1);
+}
+.pc3:hover
+{
+    transform:scale(1.1);
+}
+.pc4:hover
+{
+    transform:scale(1.1);
+}
+.pc5:hover
+{
+    transform:scale(1.1);
+}
+.pc6:hover
+{
+    transform:scale(1.1);
+}
+.pc7:hover
+{
+    transform:scale(1.1);
+}
+
+.first:hover
+{
+    background-color: #333;
+}
+.second:hover
+{
+    background-color: #333;
+}
+.third:hover
+{
+    background-color: #333;
+}
+.fourth:hover
+{
+    background-color: #333;
+}
+.fifth:hover
+{
+    background-color: #333;
+}
+.sixth:hover
+{
+    background-color: #333;
+}
+.seventh:hover
+{
+    background-color: #333;
+}
+
+form {
+    display: grid;
+    padding: 1em;
+    background: #f9f9f9;
+    border: 1px solid #c1c1c1;
+    margin: 2rem auto 0 auto;
+    margin-bottom: 40px;
+    max-width: 600px;
+    padding: 1em;
+    background: linear-gradient(90deg, yellow, #00d0ff);
+    border-radius: 20px;
+    box-shadow: #616161;
+}
+form input {
+    background: #fff;
+    border: 1px solid #9c9c9c;
+}
+form button {
+    background: lightgrey;
+    padding: 0.7em;
+    width: 100%;
+    border: 0;
+    transition: 0.2s;
+}
+form button:hover {
+    background: bisque;
+}
+  
+label {
+    padding: 0.5em 0.5em 0.5em 0;
+}
+  
+input {
+    padding: 0.7em;
+    margin-bottom: 0.5rem;
+    transition: .5s;
+}
+input:hover
+{
+    transform: scale(1.05);
+}
+input:focus {
+    outline: 3px solid mediumturquoise;
+}
+  
+@media (min-width: 400px) {
+    form {
+      grid-template-columns: minmax(200px 1fr);
+      grid-gap: 16px;
+    }
+  
+    label {
+      text-align: right;
+      grid-column: 1 / 2;
+    }
+  
+    input,
+    button {
+      grid-column: 2 / 3;
+    }
+}
+
+
+
+.niz1
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transition: 1.5s;
+
+}
+.niz2
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    transition: 0.5s;
+}
+.niz1:hover
+{
+    transform:translate(500px,0);
+}
+.niz2:hover
+{
+    color: blue;
+}
+
+@media (min-width: 400px) {
+    .footer {
+      grid-template-columns: minmax(200px 1fr);
+      grid-gap: 16px;
+    }
+  
+    la {
+      text-align: right;
+      grid-column: 1 / 2;
+    }
+  
+    input,
+    button {
+      grid-column: 2 / 3;
+    }
+}
+
+
+footer {
+    padding: 10px;
+    color: white;
+    min-height: 80%;
+    max-width: 1800px;
+    background: #2b2c2c;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+.footer-header
+{
+    transition: 1.5s;
+}
+.footer-header:hover
+{
+    transform: scale(1.1);
+    color: #00d0ff;
+}

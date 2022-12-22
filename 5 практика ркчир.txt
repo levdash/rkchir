@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<header class="header">
+    <div class="burger-menu">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-btn" for="menu-toggle">
+          <span></span>
+        </label>
+        <div class="menubox">
+            <p><b>Skin</b></p>
+            <a class="menu-item" href="#">О сайте</a>
+            <a class="menu-item" href="#">Тест</a>
+            <a class="menu-item" href="#">Рекомендации</a>
+            <a class="menu-item" href="#">Статьи</a>
+            <a class="menu-item" href="#">Контакты</a>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__nadtitle">Skin Care</h2>
+            <h1 class="intro__title">Подберите экспертный уход для своей кожи</h1>
+        </div>
+    </div>
+</div>
+<ul>
+    <li>
+      <img src="https://placepic.ru/wp-content/uploads/2018/11/0_b7c8e_fa32e8d_orig.jpg" alt="" loading="lazy">
+    </li>
+    <li>
+      <img src="https://natalyland.ru/wp-content/uploads/a/2/7/a27829135b0de0fb364bbea0f1d58a1c.jpg" alt="" loading="lazy">
+    </li>
+    <li>
+      <img src="https://wallbox.ru/resize/1440x900/wallpapers/main2/201733/15031845005998c674073700.10832818.jpg" loading="lazy">
+    </li>
+  </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("C:/Users/asus/.vscode/kurs/html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 8px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+  .menu-item {
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu-item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu-toggle{
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+  }
+p
+{
+    padding: 0px 24px;
+    color: black;
+    font-size: 21px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+li {
+    height: 40vh;
+    flex-grow: 1;
+}
+  li:last-child {
+    flex-grow: 10;
+  }
+  
+  img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  
+  
+  @media (max-aspect-ratio: 1/1) {
+    li {
+      height: 30vh;
+    }
+  }
+  
+  
+  @media (max-height: 480px) {
+    li {
+      height: 80vh;
+    }
+  }
+  
+  
+  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    ul {
+      flex-direction: row;
+    }
+  
+    li {
+      height: auto;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      max-height: 75vh;
+      min-width: 0;
+    }
+  }

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<header class="header">
+    <div class="just">Надпись</div>
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">Shine</div>
+            <nav class="nav">
+                <a class="nav__link" href="#">О сайте</a>
+                <a class="nav__link" href="#">Тест</a>
+                <a class="nav__link" href="#">Рекомендации</a>
+                <a class="nav__link" href="#">Контакты</a>
+            </nav>
+        </div>
+        <link rel="icon" href="C:\Users\asus\.vscode\kurs\kurs\favtrue.png" type="image/x-icon">
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__nadtitle">Skin Care</h2>
+            <h1 class="intro__title">Подберите экспертный уход для своей кожи</h1>
+        </div>
+    </div>
+</div>
+<div class="proda">
+    <p class="text1">
+        Кожа ежедневно подвергается огромным нагрузкам. 
+        Больше всего «достается» лицу, ведь его, в отличие от других частей тела, нельзя защитить одеждой. 
+        Поэтому за кожей необходимо ухаживать в любом возрасте. Это позволит сохранить не только ее здоровье, но и эстетичный внешний вид.
+        Если она от природы безупречна, то правильный уход поддержит ее состояние. 
+    </p>
+    <img src="C:\Users\asus\.vscode\kurs\html\pic1.jpg" width="250"/>
+    <p class="text2">
+        Качество проблемной кожи можно значительно улучшить, ежедневно заботясь о ней.
+        Безусловно, для максимального эффекта необходима помощь профессионала – очистительные, ухаживающие, омолаживающие мероприятия.
+        Для этого вы можете обратиться в Поликлинику Отрадное к опытному косметологу, который тщательно изучит состояние вашей кожи,
+        направит вас на необходимые исследования и по их результатам подберет оптимальные процедуры. 
+        Однако домашний уход за лицом все равно необходим – он поможет поддерживать результат.
+    </p>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("C:/Users/asus/.vscode/kurs/html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.header__inner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header__logo
+{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+/*Навигация*/
+.nav
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav2
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav__link
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color .1s linear;
+    position: relative;
+}
+.nav__link__niz
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: color .1s linear;
+    position: relative;
+}
+.nav__link:after 
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color: white;
+    position: sticky;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+
+
+}
+.nav__link:hover
+{
+    color: #cff;
+}
+.nav__link:hover::after
+{
+    opacity: 1;
+}
+.zagol__name
+{
+   
+    font-size: 15px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.proda
+{
+    background: #b3b3b3;
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+/*.oform
+{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}*/
+img
+{
+    float: left;
+    margin-left: 10px;
+    margin-right: 1rem;
+}
+p
+{
+    margin-left: 10px;
+}
+.just
+{
+    position: fixed;
+    color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+}

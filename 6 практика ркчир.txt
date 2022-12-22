@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<header class="header">
+    <div class="dropdown">
+        <button class="dropbtn">Уведомления</button>
+        <div class="dropdown-content">
+          <a href="#">Уведомление 1</a>
+          <a href="#">Уведомление 2</a>
+          <a href="#">Уведомление 3</a>
+        </div>
+    </div>
+   
+    <div class="burger-menu">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-btn" for="menu-toggle">
+          <span></span>
+        </label>
+        <div class="menubox">
+            <p><b>Skin</b></p>
+            <a class="menu-item" href="#">О сайте</a>
+            <a class="menu-item" href="#">Тест</a>
+            <a class="menu-item" href="#">Рекомендации</a>
+            <a class="menu-item" href="#">Статьи</a>
+            <a class="menu-item" href="#">Контакты</a>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__nadtitle">Skin Care</h2>
+            <h1 class="intro__title">Подберите экспертный уход для своей кожи</h1>
+        </div>
+        
+    </div>
+    <div class="knopka1">
+
+        <a class="button" href="https://siterost.net">Перейти на сайт</a>
+      
+    </div>
+</div>
+<section class="dws-wrapper">
+    <div class="flex-container">
+      <div class="imageBox"><img src="https://placepic.ru/wp-content/uploads/2018/11/0_b7c8e_fa32e8d_orig.jpg" alt="Картинка">
+        <h3>Котики 1</h3>
+      </div>
+      <div class="imageBox"><img src="https://natalyland.ru/wp-content/uploads/a/2/7/a27829135b0de0fb364bbea0f1d58a1c.jpg" alt="Картинка">
+        <h3>Котик 2</h3>
+      </div>
+      <div class="imageBox"><img src="https://wallbox.ru/resize/1440x900/wallpapers/main2/201733/15031845005998c674073700.10832818.jpg" alt="Картинка">
+        <h3>Котики 3</h3>
+      </div>
+    </div>
+</section>
+<div class="video-container">
+    <div class="video-wrapper">
+        <div class="vdo">
+            <video autoplay controls>
+                <source src="C:\Users\asus\.vscode\kurs\cat.mp4" type="video/mp4" />
+            </video>
+            <h3>Котик</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("C:/Users/asus/.vscode/kurs/html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 8px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+   
+  .menu-btn > span,
+  .menu-btn > span::before,
+  .menu-btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu-btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu-btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+  }
+  .menu-item {
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu-item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu-toggle{
+    opacity: 0;
+  }
+  #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    left: 0;
+  }
+
+  .card1:hover
+  {
+    transform: scale(0.7);
+    transition: all linear 0.5s;
+    
+}
+  a.button {
+    display: inline-block;
+    background: bisque;
+    color: #fff;
+    padding: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: "Montserrat Regular";
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+  }
+.knopka1
+{
+    margin: 24px;
+    text-align: center;
+    transition: all .5s ease-out;
+}
+.knopka1 a:hover
+{
+    background-color: aquamarine;
+    transform: scale(1.5);
+    transition: all .5s ease-out;
+}
+.dropbtn {
+    background-color: wheat;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 132px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px ;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+    transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:aquamarine;
+    transition: 0.5s;
+}
+
+
+.dws-wrapper {
+    margin:auto;
+    background-color:#d0d0d0;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.imageBox {
+    overflow: hidden;
+    height: 270px;
+    border-radius: 4px;
+    position: relative;
+    margin: 5px;
+}
+   
+.imageBox img {
+    min-width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.imageBox:hover img {
+    transform: scale(1.2);
+}
+.imageBox h3{
+    position: absolute;
+    transition: .8s;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 5px 15px;
+    margin: 0;
+    transform: translateX(-100%);
+    top: 45%;
+    font-size: 1.1rem;
+}
+
+.imageBox:hover h3{
+    transform: translateX(0);
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    .dws-wrapper {
+     margin-top: 20px;
+    }
+    .imageBox {
+     height: 370px;
+    }
+    .imageBox h3 {
+     font-size: 1.4rem;
+     top: 47%;
+    }
+}
+   
+@media only screen and (max-width: 320px) {
+    .imageBox {
+     height: 270px;
+    }
+    .imageBox h3 {
+     font-size: 1.1rem;
+     top: 45%;
+    }
+}
+
+.video-container {
+    margin:auto;
+    background-color:#d0d0d0;
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.vdo {
+    overflow: hidden;
+    height: 270px;
+    position: relative;
+    border-radius: 4px;
+    margin: 5px;
+}
+   
+.vdo video {
+    min-width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.vdo:hover video{
+    transform: scale(0.95)
+}
+.vdo h3{
+    position: absolute;
+    transition: .8s;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 5px 15px;
+    margin: 0;
+    transform: translateX(-100%);
+    top: 45%;
+    font-size: 1.1rem;
+}
+
+.vdo:hover h3{
+    transform: translateX(0);
+    margin-left: 10px;
+}
+@media only screen and (max-width: 480px) {
+    .video-container {
+     margin-top: 20px;
+    }
+    .vdo {
+     height: 370px;
+    }
+    .vdo h3 {
+     font-size: 1.4rem;
+     top: 47%;
+    }
+}
+   
+@media only screen and (max-width: 320px) {
+    .vdo {
+     height: 270px;
+    }
+    .vdo h3 {
+     font-size: 1.1rem;
+     top: 45%;
+    }
+}

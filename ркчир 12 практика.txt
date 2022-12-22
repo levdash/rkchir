@@ -1,0 +1,321 @@
+/////////         html          //////////
+<div class="pr121">
+<a name="list">Ссылки</a>
+<ul>
+  <li><a href="http://google.com">http://google.com</a></li>
+  <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+</ul>
+</div>
+
+
+<p class="pr122">
+    В основе сухости и обезвоженности кожи лежит нарушение ее защитного гидролипидного барьера. Главная задача масок для сухого типа — это интенсивное увлажнение и предотвращение испарения с поверхности кожи влаги, а также восстановление ее барьерных функций.
+
+В их составе ищите гиалуроновую кислоту (низкомолекулярную и высокомолекулярную), бетаин, растительные экстракты (алоэ, ромашки, винограда, оливы), витамины (Е, В3). Такие маски также подойдут для ухода за чувствительной кожей, основными проявлениями которой являются сухость, шелушение, раздражение, чувство стянутости.
+
+ </p>
+
+<section class="center-picture">
+    <div class="area">
+        <img src="html\a35.jpg" alt="per" width="200px" height="200px">
+    </div>
+    <div class="placetouch">
+        <p>Координаты</p>
+        <p class="clickX">x = <span>..</span></p>
+        <p class="clickY">y = <span>..</span></p>
+    </div>
+</section>
+
+
+
+<section class="close-notif">
+    <div class="notifs">
+        <button class="notif__btn" type="button">
+            <i class="fa-solid fa-bell"></i>
+            <div class="notif__counter"></div>
+        </button>
+        <div class="notif__inner">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+/////////////             css                /////////
+
+
+<style>
+.notification {
+  position: fixed;
+  z-index: 1000;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 20px;
+  background: white;
+  text-align: center;
+}
+.pr121
+{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+.forma {
+  background: bisque;
+  color: gray;
+}
+.pr122
+{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.area{
+    width: 500px;
+    height: 400px;
+    background-color: bisque;
+    margin: 30px auto;
+    border: 3px solid white;
+    position: relative;
+}
+
+.area img{
+    position: absolute;
+}
+
+.placetouch{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.notif__inner{
+    /* visibility: hidden; */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.notifs .notif__btn{
+    border: none;
+    background: none;
+    position: relative;
+    display: inline-block;
+}
+
+.notifs .notif__btn i{
+    font-size: 64px;
+}
+
+.notif__counter{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 0px 6px;
+    background:beige;
+    border-radius: 50%;
+}
+.links,.notif,.close-notif,.create-list{
+    margin: 0 auto;
+    text-align: center;
+}
+
+</style>
+
+
+
+
+
+
+
+
+//////////////////          js            /////////////////
+
+
+
+
+ ////////  1 задание   ////////
+
+
+    let links = document.querySelectorAll('a');
+    for (let link of links) {
+    let href = link.getAttribute('href');
+    link.style.color = 'bisque';
+    }
+
+
+    ////////  2 задание   ////////
+
+
+
+
+    let ul = document.createElement('ul');
+    document.body.append(ul);
+
+    while (true) {
+      let data = prompt("Введите текст для создания списка", "");
+
+      if (!data) {
+        break;
+      }
+
+      let li = document.createElement('li');
+      li.textContent = data;
+      ul.append(li);
+    }
+
+
+     ////////  3 задание   ////////
+
+
+
+    function showNotification({top = 0, left = 0, className, html}) {
+
+    let notification = document.createElement('div');
+    notification.className = "notification";
+    if (className) {
+    notification.classList.add(className);
+    }
+    notification.style.top = top + 'px';
+    notification.style.left = left + 'px';
+    notification.innerHTML = html;
+    document.body.append(notification);
+
+    setTimeout(() => notification.remove(), 1500);
+    }
+    let i = 1;
+    setInterval(() => {
+    showNotification({
+        top: 10,
+        left: 8,
+        html: 'Я тут! ' + i++,
+        className: "forma"
+    });
+    }, 2000);
+
+
+
+    ////////  4 задание   ////////
+
+
+
+    const area=document.querySelector(".area");
+    const per=area.querySelector('img');
+    per.style.top=Math.round(area.clientHeight/2 - per.offsetHeight/2) + "px";
+    per.style.left=Math.round(area.clientWidth/2 - per.offsetWidth/2) + "px";
+    const clickX=document.querySelector('.clickX').querySelector('span');
+    const clickY=document.querySelector('.clickY').querySelector('span');
+    area.onclick = function(click){
+        clickX.textContent=click.clientX;
+        clickY.textContent=click.clientY;
+    }
+
+
+
+    ////////  5 задание   ////////
+
+
+
+
+    const notif = document.querySelector('.notifs');
+    const notifBtn = notif.querySelector('.notif__btn');
+    const notifInner = notif.querySelector('.notif__inner');
+    const notifCounter = notif.querySelector('.notif__counter');
+    const notifArr = [
+        'Привет!',
+        'Я здесь',
+        'Еще не все',
+        'Все еще тут',
+        'Попробую еще раз..'
+    ];
+
+    let numberNotif = 0;
+    let counter = 0;
+
+    function createNotif() {
+        let element = document.createElement('div');
+        element.classList.add('notif__item');
+
+        if (numberNotif < notifArr.length) {
+            element.textContent = notifArr[numberNotif];
+            numberNotif++;
+            counter++;
+        } else {
+            numberNotif = 0;
+            element.textContent = notifArr[numberNotif];
+            numberNotif++;
+            counter++;
+        }
+
+        element.style=`
+        position: relative;
+        width: 10%;
+        padding: 10px 20px;
+        display: inline-block;
+        border: 1px solid white;
+        background: bisque;
+        color:white;
+        margin-bottom: 5px;
+        `;
+
+        notifInner.append(element);
+
+        let closeTab = document.createElement('i');
+        closeTab.className = 'fa-solid fa-xmark';
+
+        closeTab.style=`
+        position: absolute;
+        right: 10px;
+        font-size: 15px;
+        top: 3px;
+        cursor: pointer;
+        `;
+
+        element.append(closeTab);
+
+        notifCounter.textContent = counter;
+
+    }
+
+    let timerId = setInterval(createNotif, 3000);
+    
+    notifBtn.addEventListener('click', () => {
+        clearInterval(timerId);
+        setTimeout(function() {
+            timerId = setInterval(createNotif, 3000);
+        }, 10000);
+    });
+
+    notifInner.onclick = function(event) {
+        if (!event.target.classList.contains('fa-xmark')) return;
+
+        let notif = event.target.closest('.notif__item');
+        notif.remove();
+
+        counter--;
+        notifCounter.textContent=counter;
+    };
+
+
+
+
+
+
+
+</script>
+               
+
+
+
+
+//////////////////      для пятой задачи            ////////
+ <script src="https://kit.fontawesome.com/84c5ed9ab4.js" crossorigin="anonymous"></script>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="150"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylestr2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+    <header class="header">
+        <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+              <span></span>
+            </label>
+            <div class="menubox">
+                <p class="labl"><b>Skin</b></p>
+                <a class="menu-item" href="sait.html">Главная</a>
+                <a class="menu-item" href="saitstr3.html">О нас</a>
+                <a class="menu-item" href="saitstr4.html">Рекомендации</a>
+                <a class="menu-item" href="saitstr2.html">Статьи</a>
+                <a class="menu-item" href="saitstr1.html">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="html">
+        <div class="stat"><b>Статьи</b></div>
+        <div class="band">
+            <div class="item-1">
+            <a href="art1.html" class="card">
+                <div class="thumb" style="background-image: url(html/212.jpeg);"></div>
+                <article>
+                <h1>Как выбрать подходящую маску для лица</h1>
+                <span>22 июня 2021</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-2">
+            <a href="art2.html" class="card">
+                <div class="thumb" style="background-image: url(html/213.jpg);"></div>
+                <article>
+                <h1>Тоник для лица: для чего он нужен</h1>
+                <p>Большинство людей не в курсе, что такое тоник для лица и для чего он нужен, поэтому пренебрегают его использования, но зря. </p>
+                <span>18 декабря 2021</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-3">
+            <a href="art3.html" class="card">
+                <div class="thumb" style="background-image: url(html/214.jpg);"></div>
+                <article>
+                <h1>Как бороться с акне на лице</h1>
+                <p>В данной статье будет рассмотрен самый насущий вопрос в уходе за кожей лица, а именно вопрос об акне. </p>
+                <span>7 ноября 2022</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-4">
+            <a href="art4.html" class="card">
+                <div class="thumb" style="background-image: url(html/211.jpg);"></div>
+                <article>
+                <h1>Солнцезащитные средства: как подобрать</h1>
+                <p>Защита кожи лица от SPF-лучей является необходимым этапом в уходе за кожей лица.</p>
+                <span>31 января 2022</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-5">
+            <a href="art5.html" class="card">
+                <div class="thumb" style="background-image: url(html/215.jpg);"></div>
+                <article>
+                <h1>Как избавиться от морщин на лице</h1>
+                <p>Нет ни одной женщины, которая бы относилась к морщинам на лице равнодушно.</p>
+                <span>25 мая 2021</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-6">
+            <a href="art6.html" class="card">
+                <div class="thumb" style="background-image: url(html/216.jpg);"></div>
+                <article>
+                <h1>Как убрать расширенные поры на лице</h1>
+                <p>Расширенные поры на лице присуще в основном жирному типу кожи лица.</p>
+                <span>14 августа 2022</span>
+                </article>
+            </a>
+            </div>
+            <div class="item-7">
+            <a href="art7.html" class="card">
+                <div class="thumb" style="background-image: url(html/217.jpg);"></div>
+                <article>
+                <h1>Правильный подбор ежедневного крема под ваш тип кожи</h1>
+                <p>Ежедневное использование крема является залогом здоровой кожи лица</p>
+                <span>28 апреля 2022</span>
+                </article>
+            </a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="knop">
+        <button onclick="sortList()">Сортировать</button>
+    </div>
+    <div class="pr10">
+        <ul id="id01">
+            <li>Яблоко</li>
+            <li>Банан</li>
+            <li>Апельсин</li>
+            <li>Груша</li>
+            <li>Дыня</li>
+            <li>Ежевика</li>
+          </ul>
+    </div>
+
+    <h1 id="result">0</h1>
+
+    <div class="buttons">
+        <button type="button" id="pause-10" class="btn btn-primary">Остановить на 10 секунд</button>
+    </div>
+
+    <div class="pr101">
+        <button onclick="deleteUser('Яблоко')"> Удалить </button>
+        <button onclick="zamena('Огурец')"> Заменить </button>    
+    </div>
+
+
+
+    <section class="nizf">
+        <footer>
+            <ul class="social">
+                <li><a href="https://vk.com/drampak"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://vk.com/drampak"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://vk.com/drampak"><ion-icon name="logo-linkedin"><ion-icon></a></li>
+                <li><a href="https://vk.com/drampak"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+            <p>©2022 Skin Care | All Rights Reserved</p>
+        </footer>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+
+    /////////////    1 задание
+
+    const array = ['Яблоко','Огурец','Банан'];
+    console.log(array);
+
+    function deleteUser(name) {
+    var person = name;
+    const index = array.indexOf(person);
+    if (index > -1) {
+            array.splice(index, 1);
+    }
+    console.log(array);
+    }
+    function zamena(name){
+    var person = name;
+    const people = array;     
+    people[1] = people[2];   
+    console.log(array);    
+    }
+
+
+    /////////////    2 задание
+
+
+
+    function filterRange(arr, a, b) {
+    return arr.filter(item => (a <= item && item <= b));
+    }
+    let arr = [5, 3, 8, 1, 8, 4];
+    let filtered = filterRange(arr, 1, 4);
+    alert( filtered );
+    alert( arr ); 
+    
+
+
+
+    /////////////    3 задание
+
+
+
+    function sortList() {
+    var list, i, switching, b, shouldSwitch;
+    list = document.getElementById("id01");
+    switching = true;
+    while (switching) {
+        switching = false;
+        b = list.getElementsByTagName("LI");
+        for (i = 0; i < (b.length - 1); i++) {
+        shouldSwitch = false;
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+        }
+        }
+        if (shouldSwitch) {
+        b[i].parentNode.insertBefore(b[i + 1], b[i]);
+        switching = true;
+        }
+    }
+    }
+    
+     /////////////    4 задание
+
+
+    // function printNumbers(from, to) {
+    // let current = from;
+    // let timerId = setInterval(function() {
+    //     alert(current);
+    //     if (current == to) {
+    //     clearInterval(timerId);
+    //     }
+    //     current-=3;
+    // }, 3000);
+    // }
+    // printNumbers(15, 0);
+
+
+
+    /////////////    5 задание
+
+
+
+    var counter = 0;
+    var isPaused = false;
+
+    window.setInterval(function()
+    {
+        if(!isPaused){
+            counter++;
+            $('#result').html(counter);
+        }
+    }, 1000);
+
+    $('#pause-10').on('click', function(){
+        if(!isPaused){
+            isPaused = true;
+            window.setTimeout(function(){
+                isPaused = false;
+            }, 10000);
+        }
+    });
+    </script>
+</body>
+
+</html>

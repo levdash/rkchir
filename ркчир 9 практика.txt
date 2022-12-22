@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="15" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<header class="header">
+    <div class="burger-menu">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-btn" for="menu-toggle">
+          <span></span>
+        </label>
+        <div class="menubox">
+            <p class="labl"><b>Skin</b></p>
+            <a class="menu-item" href="#">О сайте</a>
+            <a class="menu-item" href="#">Тест</a>
+            <a class="menu-item" href="#">Рекомендации</a>
+            <a class="menu-item" href="#">Статьи</a>
+            <a class="menu-item" href="#">Контакты</a>
+        </div>
+    </div>
+</header>
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__nadtitle"><b>Skin Care</b></h2>
+            <h1 class="intro__title">Подберите экспертный уход для своей кожи</h1>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="ramka">
+        <p class="zag">
+            <b>Содержание</b><img class="phsod" src="https://static.zdravcity.ru/upload/main/7b7/1024_768_%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%B8%D0%BA%D0%B0.jpg" width="600px" height="250px" align="right">
+            <ul class="sod">
+                <li class="razm"><a class="sod_dec" href="#tip1">Типы кожи</li></a>
+                <li class="razm"><a class="sod_dec" href="#tip2">Общие правила и этапы ухода за кожей лица</li></a>
+                <li class="razm"><a class="sod_dec" href="#tip3">Советы для всех типов</li></a>
+                <li class="razm"><a class="sod_dec" href="#tip4">Советы для всех типов</li></a>
+            </ul>
+        </p>
+        <p class="textzav">
+            Кожа ежедневно подвергается огромным нагрузкам. Больше всего «достается» лицу, ведь его, в отличие от других частей тела,
+            нельзя защитить одеждой. Поэтому за кожей необходимо ухаживать в любом возрасте. Это позволит сохранить не только ее здоровье,
+            но и эстетичный внешний вид. Если она от природы безупречна, то правильный уход поддержит ее состояние. <br>Качество проблемной
+            кожи можно значительно улучшить, ежедневно заботясь о ней.
+        </p>
+    </div>
+</div>
+<!-- <div class="container3"> -->
+    <!-- <p class="typesk"> -->
+        <!-- <b>Типы кожи</b><br> -->
+        <!-- Существует 5 типов кожи: -->
+        <!-- <ol class="spis"> -->
+            <!-- <li class="skin">Нормальная кожа</li> -->
+            <!-- <li class="skin">Сухая кожа</li> -->
+            <!-- <li class="skin">Жирная кожа</li> -->
+            <!-- <li class="skin">Комбинированая кожа</li> -->
+            <!-- <li class="skin">Проблемная кожа</li> -->
+        <!-- </ol> -->
+    <!-- </p> -->
+<!-- </div> -->
+<div class="cont4">
+    <div class="like">
+        <button onclick="btn_clik()" id="button" class="likebtn"><img id="heart" src="like.png" alt=""><span id="count">0</span></button>
+    </div>
+
+    <div class="forma">
+        <p class="predlozh">Желаете пройти регистрацию?</p>
+        <form class="pole" action="str2.html">
+            <input type="text" id="answer" name="answer"><br>
+            <button type="submit" id="knopka" >Начать</button>
+        </form>
+    </div>
+</div>
+<script>
+   window.onload = init;
+
+    function init(){
+    var button = document.getElementById("knopka")
+    button.onclick = handleButtonClick;
+    }
+
+    function handleButtonClick() {
+        var textInput = document.getElementById("answer");
+        var otvet = textInput.value;
+        if(otvet == "Да")
+        {
+            alert("Круто!");
+            window.location.href="str2.html";
+        }
+        else{
+            alert("Введите ответ, пожалуйста");
+        }
+    }
+
+
+
+
+    var isCliked = false;
+    var counters = document.getElementById('count');
+    var button = document.getElementById('button');
+    var heart = document.getElementById('heart');
+
+    var like_count = Number(counters.textContent);
+
+    function draw_cursor (e) {
+        heart.style.position = "absolute";
+        heart.style.backgroundColor = "transparent"; 
+        heart.style.width = "2%";
+        heart.style.left = e.pageX + "px";
+        heart.style.top = e.pageY + "px";
+        let img = heart.cloneNode(true);
+        img.removeAttribute('id');
+        img.classList.add('fordel');
+        document.body.append(img);   
+    }
+    function remove_hearts(){
+        var del = document.getElementsByClassName('fordel');
+
+        while(del.length > 0 ){
+            document.removeEventListener('mousemove', draw_cursor);
+            del[0].remove();
+        }
+    }
+
+    function btn_clik (){
+        document.addEventListener('mousemove', draw_cursor);
+
+        if (isCliked){
+            isCliked = false;
+            like_count -= 1;
+            counters.textContent = like_count;
+
+            heart.style.position = "static";
+            heart.style.width = "25%";
+            heart.style.backgroundColor = "transparent";
+            remove_hearts();
+
+            button.classList.remove('clicked');
+        }
+        else{  
+            heart.style.backgroundColor = "red";
+            button.classList.add('clicked');
+            button.style.zIndex = "100"; 
+            like_count += 1;
+            counters.textContent = like_count;
+            isCliked = true;
+        }
+    }
+
+</script>
+</body>
+
+</div>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="15" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\asus\.vscode\kurs\css\str2cs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+    <title>Skin|Рекомендации по уходу</title>
+</head>
+<body>
+<script>
+    let userName = prompt("Логин", '');
+
+if (userName == 'Админ') {
+
+let pass = prompt('Пароль', '');
+
+if (pass == 'Я главный') {
+alert( 'Здравствуйте!' );
+} else if (pass == '' || pass == null) {
+alert( 'Отменено' );
+} else {
+alert( 'Неверный пароль' );
+}
+
+} else if (userName == '' || userName == null) {
+alert( 'Отменено' );
+} else {
+alert( "Я вас не знаю" );
+};
+
+
+
+
+
+
+</script>
+</body>
+
+</div>
+</html>
+
+
+
+
+
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("C:/Users/asus/.vscode/kurs/html/fontrue.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+.intro__inner
+{
+    color: whitesmoke;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+    color: bisque;
+    text-shadow: 1px 1px 1px #616161;
+    text-align: center;
+}
+.intro__title
+{
+    font-size: 30px;
+    font-weight: 650;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+/*Меню-бургер*/
+.menu-btn
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 8px;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+   
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after 
+{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+.menu-btn > span::before 
+{
+    content: '';
+    top: -8px;
+}
+.menu-btn > span::after 
+{
+    content: '';
+    top: 8px;
+}
+.menubox
+{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 0px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+.labl
+{
+    padding: 15px 0 0 25px;
+}
+.menu-item
+{
+    display: flex;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+.menu-item:hover 
+{
+    background-color: #CFD8DC;
+}
+#menu-toggle
+{
+    opacity: 0;
+}
+#menu-toggle:checked ~ .menu-btn > span
+{
+    transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before
+{
+    top: 0;
+    transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after
+{
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox
+{
+    visibility: visible;
+    left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .dws-wrapper {
+     margin-top: 20px;
+    }
+    .imageBox {
+     height: 370px;
+    }
+    .imageBox h3 {
+     font-size: 1.4rem;
+     top: 47%;
+    }
+}
+   
+@media only screen and (max-width: 320px) {
+    .imageBox {
+     height: 270px;
+    }
+    .imageBox h3 {
+     font-size: 1.1rem;
+     top: 45%;
+    }
+}
+/*Продолжение страницы*/
+.container2
+{
+    color: white;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: left;
+    padding: 20px;
+}
+.ramka
+{
+    border: 3px solid bisque;
+    width: 100%;
+    height: 520px;
+}
+.zag
+{
+    font-size: 30px;
+    padding-top: 55px;
+    padding-left: 85px;
+}
+.sod
+{
+    padding: 20px 0 20px 100px;
+    font-size: medium;
+}
+
+.razm
+{
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+.sod_dec
+{
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+.sod_dec:hover
+{
+   color: bisque;
+}
+.phsod
+{
+    padding-right: 80px;
+    padding-top: 10px;
+    max-width: 100%;
+}
+.textzav
+{
+    font-size: 20px;
+    padding-left: 80px;
+}
+/*Типы кожи*/
+.container3
+{
+    color: white;
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+    text-align: left;
+    padding: 20px;
+    
+}
+.pole,
+.predlozh
+{
+    font-size: medium;
+    text-align: center;
+}
+
+.forma
+{
+    padding: 20px;
+}
+
+
+.like{
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.likebtn > img{
+    border-radius: 10px;
+    flex-grow: 0.5; 
+    width: 25%;
+    padding: 5px;
+}
+.likebtn > span{
+    flex-grow: 1;
+}
+.likebtn{
+    display: flex;
+    align-items: center;
+    color: palevioletred;
+    padding: 5px;
+    width: 80px;
+    border-radius: 40px;
+    font-size: 140%;
+}
+.cont4
+{
+    background: linear-gradient(to right, #aaaaaa, #cacaca);
+}
+
+
+body {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 50px;
+  }
+  
+  .cut-short {
+    width: 60px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: aqua;
+  }
+  
+  .submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }

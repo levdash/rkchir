@@ -1,0 +1,160 @@
+@font-face {
+	font-family: 'Montserrat Regular';
+	src: url('../fonts/montserrat_regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/montserrat_regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/montserrat_regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/montserrat_regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/montserrat_regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('C:\Users\asus\.vscode\pract2\fonts2\0d779b9702f7338f4f45753df543ba7e\fonts\montserrat_regular.svg#montserrat_regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'Appetite-Italic';
+	src: url('../fonts/appetite-italic.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/appetite-italic.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/appetite-italic.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/appetite-italic.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/appetite-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/appetite-italic.svg#appetite-italic') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+body{
+    margin: 0;
+    font-family: "Montserrat Regular";
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5
+{
+    margin: 0;
+}
+/*Контейнер*/
+.container {
+    width: 100%;
+    max-width: 1210px;
+    margin: 0 auto;
+    color: white;
+}
+/*Интро*/
+.intro
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: 
+    url("../html1/fon1.jpg") center
+    no-repeat;
+    
+    background-size: cover;
+}
+.intro__inner
+{
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.intro__nadtitle
+{
+    font-family: 'Appetite-Italic';
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    
+}
+.intro__title
+{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+
+}
+/*Шапка*/
+.header
+{
+    padding-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.header__inner
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header__logo
+{
+    font-size: 30px;
+    font-weight: 600;
+    color: wheat;
+}
+/*Навигация*/
+.nav
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav__link
+{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    transition: color .1s linear;
+    position: relative;
+}
+
+.nav__link:after 
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+
+
+}
+.nav__link:hover
+{
+    color: bisque;
+}
+.nav__link:hover::after
+{
+    opacity: 1;
+}
+.zagol__name
+{
+   
+    font-size: 15px;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+} 
+.continer2
+{
+    background: #c96;
+}
